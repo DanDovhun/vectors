@@ -17,5 +17,9 @@ run:
 	go run main.go
 
 buildAndRun:
-	go build
+	go mod tidy && go build
+	./Vectors
+
+cleanBuildAndRun:
+	go mod init Vectors && go mod tidy && go build
 	./Vectors
